@@ -1,0 +1,23 @@
+.carParkResult h2,
+.carParkResult h3 {
+	font-family: inherit;
+	color: orange;
+}
+
+.carParkResult p {
+	color: #e5e5e5e5;
+}
+
+.carParkResult ul {
+	color: #e5e5e5e5;
+}
+
+.carParkResult {
+	margin: 0 auto;
+	width: 70%;
+	text-align: left;
+}
+
+.titleHightlight {
+	color: orange;
+}

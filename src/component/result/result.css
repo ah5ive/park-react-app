@@ -1,0 +1,40 @@
+.searchResultList ul {
+	/*display: flex;*/
+	height: 100%;
+}
+
+.searchResultList li {
+  background-color: rgb(116,119,209);
+  margin: .3em;
+  border-radius: .5em;
+  padding: .8em;
+  color: #e5e5e5e5;
+  width: 70%;
+  margin: .6em auto ;
+	text-align: left;
+}
+
+.searchResultList li:hover {
+  background-color: rgb(116,166,209);
+}
+
+.resultHeader{
+	color: #74A6D1
+	}
+
+.resultBtn{
+	background-color: orange;
+	margin-top: -3px;
+	border-radius: .5em;
+	align-content: center;
+	border: none;
+	height: 100%;
+	padding: .5em;
+	font-size: .8em;
+	float: right;
+}
+
+.resultBtn:hover,
+.resultBtn:active {
+	background-color: yellow;
+}
