@@ -11,7 +11,7 @@ class myMap extends React.Component {
 
     render(){
         console.log("google", this.props.google);
-        console.log("selected",this.onInfoWindowClose);
+        //console.log("selected",this.onInfoWindowClose);
         return (
             <div className="map">
                 <Map

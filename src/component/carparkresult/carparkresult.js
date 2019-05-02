@@ -4,6 +4,36 @@ import Googlemap from '../googlemap/googlemap';
 import './carparkresult.css';
 
 class carparkResult extends React.Component {
+    construtor(props){
+        this.getLatLong = this.getLatLong.bind( this );
+    }
+
+
+    componentDidMount(){
+        this.getLatLong();
+
+    }
+
+    getLatLong(event){
+        var xCoord = 11559656.16256661;
+        var yCoord = 146924.54200324757;
+        const xyBaseURL = 'https://developers.onemap.sg/commonapi/convert/3414to4326?X=' + xCoord +'&Y=' + yCoord;
+        console.log("GETLATLONG");
+        fetch(xyBaseURL,{
+            method:'GET',
+            // mode: 'cors',
+            // body: 'X',
+            // headers:{
+            //     'Content-Type':'application/json',
+            // }
+        })
+        .then((response)=>{
+            return response.json();
+        })
+        .then((data)=>{
+            console.log("DATALATLON",data);
+        })
+    }
 
     render() {
         let loading = <p>Loading...</p>;
