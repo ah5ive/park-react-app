@@ -114,7 +114,7 @@ class App extends Component {
       <div className="App">
       <BrowserRouter>
           <header>
-            <p>I AM AT APP</p>
+            <nav>MY NAV BAR</nav>
           </header>
           <main>
             <Switch>
