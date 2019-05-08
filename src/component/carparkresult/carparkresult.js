@@ -4,8 +4,13 @@ import Googlemap from '../googlemap/googlemap';
 import './carparkresult.css';
 
 class carparkResult extends React.Component {
-    construtor(props){
+    constructor(props){
+        super(props);
         this.getLatLong = this.getLatLong.bind( this );
+        this.state = {
+            myLat: null,
+            myLon: null
+        };
     }
 
 
@@ -15,8 +20,8 @@ class carparkResult extends React.Component {
     }
 
     getLatLong(event){
-        var xCoord = 11559656.16256661;
-        var yCoord = 146924.54200324757;
+        var xCoord = parseInt(this.props.singleCarParkProps.x_coord);
+        var yCoord = parseInt(this.props.singleCarParkProps.y_coord);
         const xyBaseURL = 'https://developers.onemap.sg/commonapi/convert/3414to4326?X=' + xCoord +'&Y=' + yCoord;
         console.log("GETLATLONG");
         fetch(xyBaseURL,{
@@ -31,7 +36,11 @@ class carparkResult extends React.Component {
             return response.json();
         })
         .then((data)=>{
-            console.log("DATALATLON",data);
+            var reactThis = this;
+            reactThis.setState({myLat: data.latitude, myLon: data.longitude});
+            //console.log("DATALATLON",data);
+            console.log("MYLAT",this.state.myLat);
+            console.log("MYLON", this.state.myLon)
         })
     }
 
@@ -61,7 +70,9 @@ class carparkResult extends React.Component {
                 <ul>
                     {finalResult}
                 </ul>
-                <Googlemap/>
+                <Googlemap
+                    myLatProps = {this.state.myLat}
+                    myLonProps = {this.state.myLon}/>
              </div>
             )
     }

@@ -78,10 +78,10 @@ class App extends Component {
 
         fetch (baseCarparkAvailableURL,{
             method:'GET',
-            mode: "cors",
-            headers:{
-                'Content-Type':'application/json',
-            },
+            // mode: "cors",
+            // headers:{
+            //     'Content-Type':'application/json',
+            // },
         })
         .then((response)=> {
           return response.json();
