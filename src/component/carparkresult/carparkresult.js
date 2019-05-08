@@ -41,12 +41,12 @@ class carparkResult extends React.Component {
             this.renderMap();
         })
     }
-
+    //renderMap
     renderMap(){
         loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyCoyQTMWR5dEOWmtHhp6_4KIFfB4KkTTWU&callback=initMap")
         window.initMap = this.initMap;
     }
-
+    //create map
     initMap(){
         console.log('initMapx',this.props.myLatProps);
         console.log("initMapY", this.props.myLonProps);
@@ -57,8 +57,8 @@ class carparkResult extends React.Component {
         var marker = new window.google.maps.Marker({
           position: {lat: this.state.myLat, lng: this.state.myLon},
           map: map,
-          title:this.props.singleCarParkProps.address
-});
+          title:this.props.singleCarParkProps.address,
+        });
     }
 
     render() {
