@@ -1,10 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## HDB Parking Availablitiy Search Web App
-sing creat-react-app to create a web app to search for HDB Parking Availablity.
+### Using creat-react-app to create a web app to search for HDB Parking Availablity.
 
-a. Create a search component for user to type in a location. 
-b. Fetching data from external APIs and getting the list result of the search and get the carparking availablity of the particular carpark area requested.
-c. Fetch Google map API for to shown where the location is.
+<ol>
+	<li>Create a components for user to type in a location, viewing the search result list and the final search result.</li>
+	<li>Fetching 4 external APIs:
+		<ul>
+			<li>To query the search to get information of the HDB carpark infomation.</li>
+			<li>To use infomation to query the availbaily and location of carpark.</li>
+			<li>To covert x and y coordinates to latitude and longitude.</li>
+			<li>To get google to show it location.</li>
+		</ul>
+	</li>
+<li>CSS are refactor for responsive change in media query</li>
+</ol>
 
-**note The API from data.gov.sg are allow to call at an interval of 1min.
+**note The API from data.gov.sg are allow to call only at an interval of 1min. Search limited to HDB carparks and Cars.
