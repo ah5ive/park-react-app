@@ -16,4 +16,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <li>CSS are refactor for responsive change in media query</li>
 </ol>
 
-**note The API from data.gov.sg are allow to call only at an interval of 1min.
+**note The API from data.gov.sg are allow to call only at an interval of 1min. Search limited to HDB carparks and Cars.
