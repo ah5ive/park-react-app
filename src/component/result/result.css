@@ -7,23 +7,25 @@
 	margin: .6em auto 0;
 	flex-direction: row;
 	align-items: center;
+/*	align-content: center;*/
+	justify-content: space-between;
 }
 
 .searchResultList p {
-/*  height: 100%;*/
-  width: 80%;
   margin: 0%;
   padding: 2%;
   color: #e5e5e5e5;
-  display: flex;
-	justify-content: flex-start;
 	font-size: 2vh;
+	align-self: auto;
 }
 
 .searchResultList:hover {
   background-color: rgb(116,166,209);
 }
-
+.addressColor p {
+	color: #FA9252;
+	font-variant: 900;
+}
 .resultHeader{
 	color: #74A6D1
 	}
@@ -77,8 +79,6 @@
  	text-align: center;
   padding: .4em 0em 0em .4em;
   color: #e5e5e5e5;
-  display: flex;
-	justify-content: flex-start;
 	font-size: 2.8vh;
 	}
 }
