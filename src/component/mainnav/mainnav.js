@@ -14,7 +14,7 @@ class mainNav extends React.Component {
             <nav className="navBarMain" >
             <ul>
                 <li>
-                    <NavLink to="/" onClick={this.props.resetAllProps}>GO HOME</NavLink>
+                    <NavLink to="/" onClick={this.props.resetAllProps}>Home</NavLink>
                 </li>
             </ul>
             </nav>
