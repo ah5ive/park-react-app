@@ -79,10 +79,6 @@ class App extends Component {
 
         fetch (baseCarparkAvailableURL,{
             method:'GET',
-            // mode: "cors",
-            // headers:{
-            //     'Content-Type':'application/json',
-            // },
         })
         .then((response)=> {
           return response.json();
@@ -132,6 +128,8 @@ class App extends Component {
             <Switch>
 
               {Object.keys(this.state.finalResult).length !== 0 && <Redirect from="/result" to= "/carparkresult" exact />}
+
+              {!this.state.singleCarPark && <Redirect from="/carparkresult" to="/"/>}
 
               {!this.state.searchDisplay && <Redirect from="/result" to="/" exact/>}
 

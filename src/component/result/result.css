@@ -10,17 +10,17 @@
 }
 
 .searchResultList p {
-  height: 100%;
+/*  height: 100%;*/
   width: 80%;
   margin: 0%;
-  padding: 3%;
+  padding: 2%;
   color: #e5e5e5e5;
   display: flex;
 	justify-content: flex-start;
 	font-size: 2vh;
 }
 
-.searchResultList p:hover {
+.searchResultList:hover {
   background-color: rgb(116,166,209);
 }
 
@@ -37,7 +37,7 @@
 	height: 97%;
 	padding: 1.5%;
 	margin: 1.5%;
-	font-size: 1.5vh;
+	font-size: 2vh;
 
 }
 
@@ -48,37 +48,50 @@
 
 
 @media (max-width: 576px) {
-	.searchResultList{
+	.searchResultList {
+		width: 95%;
 		display: inline-flex;
 		flex-direction: column;
 /*		justify-content: center;*/
 	}
 
+	.searchResultList:hover {
+  background-color: rgb(116,166,209);
+	}
+
 	.resultBtn {
 		/*align-self: auto;*/
 		margin: 0 10% 4% 10%;
-		font-size: 1.4vh;
-		height: 50%;
-		width: 80%;
+		font-size: 2.9vh;
+		width: 95%;
 	}
+
+	.resultBtn:hover,
+	.resultBtn:active {
+	background-color: #FDBD96;
+}
+
 	.searchResultList p {
   height: 100%;
-  width: 80%;
+  width: 96%;
  	text-align: center;
   padding: .4em 0em 0em .4em;
   color: #e5e5e5e5;
   display: flex;
 	justify-content: flex-start;
-	font-size: 1.4vh;
+	font-size: 2.8vh;
 	}
 }
 
 
 
 @media (max-width: 1023px) and (min-width: 812px) {
-.searchResultList{
+	.searchResultList{
 	flex-direction: row;
 	align-items: center;
+	}
+	.searchResultList:hover {
+  background-color: rgb(116,166,209);
 	}
 
 	.resultBtn {

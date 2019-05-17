@@ -1,5 +1,5 @@
 .searchBar {
-	margin: 10em auto 0;
+	margin: 25% auto 0;
 }
 
 .searchBar label {
@@ -31,6 +31,9 @@
 }
 
 @media (max-width: 576px) {
+/*	.searchBar {
+		margin: 40% auto 0;
+	}*/
 	.searchBar input {
 		width: 60%;
 	}
