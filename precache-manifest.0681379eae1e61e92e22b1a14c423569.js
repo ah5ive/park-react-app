@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "09054728222a3329e4f5",
-    "url": "/parking-react-app/static/css/main.f5a79d9c.chunk.css"
+    "revision": "ebbcc21ee480c6af3e60",
+    "url": "/parking-react-app/static/css/main.5d5948da.chunk.css"
   },
   {
-    "revision": "09054728222a3329e4f5",
-    "url": "/parking-react-app/static/js/main.75603015.chunk.js"
+    "revision": "ebbcc21ee480c6af3e60",
+    "url": "/parking-react-app/static/js/main.a9faaf0d.chunk.js"
   },
   {
     "revision": "1f6149c86e41daa2ac2b",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/parking-react-app/static/js/2.a6844af4.chunk.js"
   },
   {
-    "revision": "4b548a1d818916ce40c4c625d1778d9f",
+    "revision": "b33c04684de6467f49bc7eb2eacd953e",
     "url": "/parking-react-app/index.html"
   }
 ];

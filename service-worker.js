@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/parking-react-app/precache-manifest.8685a9fa7e46d58553169affcaef4d99.js"
+  "/parking-react-app/precache-manifest.0681379eae1e61e92e22b1a14c423569.js"
 );
 
 workbox.clientsClaim();
