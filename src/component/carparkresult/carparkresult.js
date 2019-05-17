@@ -54,7 +54,7 @@ class carparkResult extends React.Component {
           center: {lat: this.state.myLat, lng: this.state.myLon},
           zoom: 18
         });
-        var marker = new window.google.maps.Marker({
+        const marker = new window.google.maps.Marker({
           position: {lat: this.state.myLat, lng: this.state.myLon},
           map: map,
           title:this.props.singleCarParkProps.address,
@@ -108,19 +108,3 @@ function loadScript(url){
 }
 
 export default carparkResult;
-
-// address: "BLK 113 TO 120 POTONG PASIR AVENUE 1"
-// car_park_basement: "N"
-// car_park_decks: "0"
-// car_park_no: "PP5"
-// car_park_type: "SURFACE CAR PARK"
-// free_parking: "SUN & PH FR 7AM-10.30PM"
-// gantry_height: "0.00"
-// night_parking: "YES"
-// rank: 0.0901673
-// short_term_parking: "NO"
-// type_of_parking_system: "ELECTRONIC PARKING"
-// x_coord: "31328.0300"
-// y_coord: "35388.2500"
-// _full_count: "67"
-// _id: 670
