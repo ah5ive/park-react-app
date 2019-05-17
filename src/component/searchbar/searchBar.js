@@ -13,10 +13,7 @@ class SearchBar extends React.Component {
     };
 
     render() {
-        // if (this.props.searchDisplayProps){
-        //     console.log("SearchBar",this.props.searchDisplayProps)
-        //     return <Redirect to="/result"/>
-        // };
+
         return(
             <React.Fragment>
                 <div className="searchBar">

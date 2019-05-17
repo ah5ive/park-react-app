@@ -110,3 +110,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 22/4/2019
 1. tested google-maps-react npm.
+
+2/5/2019
+1. Add Proxy at dependencies to solve Cor issue.
+
+8/5/2019
+1. change google map method to pure function javascript
+2. use fetch to call back initMap function to display map

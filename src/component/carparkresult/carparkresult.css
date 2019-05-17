@@ -21,3 +21,8 @@
 .titleHightlight {
 	color: orange;
 }
+
+#map {
+	margin-top: 10px;
+  height: 60vh;
+}

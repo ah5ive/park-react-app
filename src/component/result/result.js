@@ -11,15 +11,13 @@ class result extends React.Component {
          console.log("===FilterResult===",this.props.filterResultProps);
          //console.log("xxx result props xxx",this.props.resultProps);
          const addResults = this.props.filterResultProps.map((carpark, index)=>{
-            return  <li key={index}>Address: {carpark.address}<button className="resultBtn" onClick={()=>this.props.checkAvailabiltyHandlerProps(carpark,index)}>Check Availablity</button></li>
+            return  <React.Fragment><div className="searchResultList"><p>Address: {carpark.address}</p><button className="resultBtn" onClick={()=>this.props.checkAvailabiltyHandlerProps(carpark,index)}>Check Availablity</button></div></React.Fragment>
          })
         return (
-            <React.Fragment>
-                <h1 className="resultHeader">Search Result</h1>
-                <ul className="searchResultList">
-                  {addResults}
-                </ul>
-            </React.Fragment>
+                <div>
+                    <h1 className="resultHeader">Search Result</h1>
+                     {addResults}
+                </div>
             );
     }
 }
