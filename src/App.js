@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import SearchBar from './component/searchbar/searchBar';
+import MainNav from './component/mainnav/mainnav';
 import Result from './component/result/result';
 import CarParkResult from './component/carparkresult/carparkresult'
+import Myfooter from './component/myfooter/myfooter';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 // import logo from './logo.svg';
 import './App.css';
@@ -34,7 +36,6 @@ class App extends Component {
     onSubmitHandler(event){
       event.preventDefault();
       var reactThis = this;
-      this.setState({searchDisplay: true})
       //fetch api
       console.log("onSubmitHandler", this.state.searchInput);
       const baseUrl = 'https://data.gov.sg/api/action/datastore_search?resource_id=139a3035-e624-4f56-b63f-89ae28d4ae4c&q='
@@ -53,10 +54,10 @@ class App extends Component {
           });
 
             if(filterResult.length < 1 || filterResult === undefined){
-                reactThis.setState({message: 'Address Not Found'});
+                reactThis.setState({message: 'Address Not Found, Please Try Again.'});
             } else {
                 //setState of result
-                reactThis.setState({filterResult: filterResult});
+                reactThis.setState({filterResult: filterResult, searchDisplay: true, message:''});
                 console.log("AFTER FILTER",this.state.filterResult);
             };
 
@@ -94,7 +95,7 @@ class App extends Component {
                 return carPark.carpark_number === carpark.car_park_no;
             });
             if (searchCarPark.length < 1 || searchCarPark === undefined){
-              reactThis.setState({message: 'Car Park Not Found, Please Search Again'})
+              reactThis.setState({message: 'Car Park Not Found, Try Searching Again'})
             } else {
               reactThis.setState({finalResult: searchCarPark, message: ''})
             };
@@ -109,22 +110,37 @@ class App extends Component {
 
     }
 
+    resetAll(event){
+        event.prevent.default()
+        //to reset state
+        this.setState({
+                message: '',
+                searchDisplay: false,
+                result:[ ],
+                filterResult:[ ],
+                carParks:[ ],
+                finalResult:[ ],
+                singleCarPark: null, })
+    }
+
   render() {
     return (
       <div className="App">
-      <BrowserRouter>
-          <header>
-            <p>I AM AT APP</p>
-          </header>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+          {this.state.searchDisplay && <MainNav resetAllProps={this.resetAll}/>}
           <main>
             <Switch>
+
               {Object.keys(this.state.finalResult).length !== 0 && <Redirect from="/result" to= "/carparkresult" exact />}
+
+              {!this.state.searchDisplay && <Redirect from="/result" to="/" exact/>}
 
               {this.state.searchDisplay && <Redirect from="/" to="/result" exact />}
 
               <Route exact path="/result" render = {()=>(<Result
                                                             filterResultProps={this.state.filterResult}
                                                             checkAvailabiltyHandlerProps={this.checkAvailabiltyHandler}/>)}/>
+
               <Route exact path="/carparkresult"
                       render = {()=>(<CarParkResult
                                         finalResultProps={this.state.finalResult}
@@ -137,7 +153,7 @@ class App extends Component {
                                         onSubmitHandlerProps={this.onSubmitHandler}/>)}/>
             </Switch>
           </main>
-          <footer><p>{this.state.message}</p></footer>
+          <Myfooter messageProps = {this.state.message}/>
       </BrowserRouter>
       </div>
     );

@@ -9,11 +9,6 @@ import './googlemap.css';
 
 class myMap extends React.Component {
 
-    constructor(props){
-        super(props);
-        // this.renderMap = this.renderMap.bind( this );
-        // this.initMap = this.initMap.bind( this )
-    }
 
     componentDidMount(){
         console.log('initMapx',this.props.myLatProps);
