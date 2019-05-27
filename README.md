@@ -17,3 +17,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 </ol>
 
 **Note: API call at Data.gov.sg are only allow to call at an interval of 1 min.
+*** Redux is not used to store the state.
