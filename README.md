@@ -16,5 +16,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <li>CSS are refactor for responsive change in media query</li>
 </ol>
 
-**Note: API call at Data.gov.sg are only allow to call at an interval of 1 min.
+**Note: API call at Data.gov.sg are only allow to call at an interval of 1 min.<br/>
 *** Redux is not used to store the state.
