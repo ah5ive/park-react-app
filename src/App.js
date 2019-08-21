@@ -41,7 +41,7 @@ class App extends Component {
       const baseUrl = 'https://data.gov.sg/api/action/datastore_search?resource_id=139a3035-e624-4f56-b63f-89ae28d4ae4c&q='
       fetch (baseUrl + this.state.searchInput.toLowerCase())
         .then((response)=> {
-          return response.json()
+          return response.json();
         })
         .then((data)=> {
           console.log("FETCH",data.result.records);
@@ -63,7 +63,7 @@ class App extends Component {
 
         }).catch((err)=>{
             console.log(err)
-            reactThis.setState({message: err })
+            reactThis.setState({message: `${err}` })
         });
     }
 

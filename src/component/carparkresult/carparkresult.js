@@ -25,7 +25,7 @@ class carparkResult extends React.Component {
         var xCoord = parseInt(this.props.singleCarParkProps.x_coord);
         var yCoord = parseInt(this.props.singleCarParkProps.y_coord);
         const xyBaseURL = 'https://developers.onemap.sg/commonapi/convert/3414to4326?X=' + xCoord +'&Y=' + yCoord;
-        console.log("GETLATLONG");
+        //console.log("GETLATLONG");
         fetch(xyBaseURL,{
             method:'GET',
         })
